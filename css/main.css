@@ -1,0 +1,360 @@
+@charset "UTF-8";
+
+@font-face {
+  font-weight: 300;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+
+  src: url("../fonts/sourcesanspro-300-normal.woff2") format("woff2"), url("../fonts/sourcesanspro-300-normal.woff") format("woff");
+}
+
+/* Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,main,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+}
+
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+}
+
+ol,ul {
+  list-style: none;
+}
+
+/* Box Model */
+
+*,*:before,*:after {
+  box-sizing: border-box;
+}
+
+/* Basic */
+
+body {
+  min-height: 100vh;
+  background: #ffffff url("../img/bg.jpg") no-repeat center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  min-width: 320px;
+}
+
+body.is-loading {
+  -webkit-transition: none !important;
+  transition: none !important;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+/* No JS */
+
+.no-js .page-main {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+
+/* Type */
+
+body {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 2;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #414f57;
+  letter-spacing: 0.2em;
+}
+
+@media screen and (max-width: 1680px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease, border-color 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+  color: #efb46f;
+}
+
+strong,b {
+  color: #313f47;
+}
+
+p {
+  margin: 0 0 1.5em 0;
+}
+
+h1,h2 {
+  margin: 0 0 0.85em 0;
+  line-height: 1.5;
+  color: #313f47;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.85em;
+  letter-spacing: 0.18em;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.65em;
+  }
+}
+
+hr {
+  margin: 2.5em 0;
+  border: 0;
+  border-bottom: solid 1px #c8cccf;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Icons */
+
+.icon {
+  width: 1.9em;
+  height: 2.7em;
+  margin: auto;
+  margin: auto 0;
+
+  fill: currentColor;
+}
+
+.icon--envelope {
+  stroke: currentColor;
+  stroke-width: 2px;
+}
+
+.icon--mk {
+  fill: transparent;
+  stroke: currentColor;
+  stroke-width: 1px;
+  margin-left: 4px;
+}
+
+.letter-icon {
+  width: 0.7em;
+  font-size: 2.2em;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -ms-flex-wrap: wrap;
+}
+
+.icons li {
+  display: inline-block;
+  padding: 0.675em 0.5em;
+}
+
+.icons a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  width: 3.75em;
+  height: 3.75em;
+  line-height: 3.75em;
+  color: #c8cccf;
+  text-decoration: none;
+  border: solid 1px currentColor;
+  border-radius: 100%;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+}
+
+.icons a:hover {
+  color: #efb46f;
+}
+
+/* Main */
+
+.page-main {
+  position: relative;
+  min-width: 27em;
+  max-width: 100%;
+  padding: 3em 3em 3em 3em;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 4px;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  cursor: default;
+  opacity: 1;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
+}
+
+.avatar {
+  position: relative;
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+.avatar img {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1.5em #ffffff;
+}
+
+.avatar:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -3em;
+  z-index: -1;
+  display: block;
+  width: calc(100% + 6em);
+  height: 1px;
+  background: #c8cccf;
+}
+
+@media screen and (max-width: 480px) {
+  .page-main {
+    width: 100%;
+    min-width: 0;
+    padding: 4em 2em 2.5em 2em ;
+  }
+
+  .avatar:before {
+    left: -2em;
+    width: calc(100% + 4em);
+  }
+}
+
+.description {
+  text-transform: none;
+}
+
+.description:before {
+  content: "";
+  display: block;
+  max-width: 10em;
+  margin: 1.8em auto;
+  border-bottom: solid 1px #c8cccf;
+}
+
+@media screen and (max-width: 480px) {
+  .description br {
+    display: none;
+  }
+}
+
+body.is-loading .page-main {
+  -webkit-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+  opacity: 0;
+}
+
+/* Footer */
+
+.page-footer {
+  align-self: flex-end;
+  width: 100%;
+  padding: 1.5em 0 1.5em 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: default;
+
+  -ms-flex-item-align: end;
+}
+
+.copyright {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9em;
+}
+
+.copyright li {
+  display: inline-block;
+  margin: 0 0 0 0.45em;
+  padding: 0 0 0 0.85em;
+  line-height: 1;
+  border-left: solid 1px rgba(255, 255, 255, 0.5);
+}
+
+.copyright li:first-child {
+  border-left: 0;
+}
+
+/* Wrapper */
+
+.page-wrapper {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  min-height: 100%;
+  padding: 1.5em 1.5em 0;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: justify;
+  -ms-flex-align: center;
+  -ms-flex-pack: justify;
+}
+
+.page-wrapper > * {
+  z-index: 1;
+}
+
+@media screen and (max-width: 360px) {
+  .page-wrapper {
+    padding: 0.75em;
+  }
+}
