@@ -87,9 +87,7 @@
 		<!-- Scripts -->
 			<script>
 				document.body.classList.remove("no-js");
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-				}
+				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
 			</script>
 
 	</body>
