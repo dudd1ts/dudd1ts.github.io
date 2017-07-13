@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/*
+ * Общие переменные scss, стили лейаута, которые применяются
+ * ко всем страницам и стили переиспользуемых элементов
+ */
+html, body {
+  padding: 0;
+  margin: 0; }
+
+html {
+  background: #1d121f linear-gradient(90deg, #1d121f, #270a17);
+  height: 100%; }
+
+body {
+  align-items: center;
+  background: url("../img/vinyl.png") center no-repeat;
+  color: #fff;
+  display: flex;
+  font: 1em "Fira Sans", sans-serif;
+  justify-content: center;
+  height: 100%;
+  min-height: 850px; }
+
+.app {
+  height: 850px;
+  position: relative;
+  width: 780px; }
+
+.copyright {
+  bottom: 2em;
+  color: #f0eed5;
+  font-size: 0.9em;
+  font-weight: 300;
+  position: absolute;
+  right: 0;
+  white-space: nowrap; }
+
+.copyright-link {
+  color: #ff9749; }
+
+.copyright-link::before {
+  bottom: 100%;
+  content: url("../img/ha-logo.png");
+  height: 50px;
+  left: 0;
+  margin-bottom: 0.5em;
+  position: absolute;
+  width: 145px; }
+
+.copyright-link:hover {
+  color: #f00; }
+
+.player-wrapper {
+  animation: fadein 1000ms ease-out;
+  animation-iteration-count: 1;
+  background: url("../img/player-background.png") no-repeat 0 100%;
+  background-size: cover;
+  margin-right: 20px; }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*
+ * Разметка главного блока:
+ */
+.main {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%; }
+
+.main-wrap {
+  position: relative;
+  z-index: 1; }
+
+.logo {
+  background: url("../img/melody-logo.png") center no-repeat;
+  height: 83px;
+  left: 50%;
+  margin-top: 170px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -100em;
+  top: 0;
+  transform: translateX(-50%);
+  width: 186px; }
+
+.title {
+  color: #230d1a;
+  display: block;
+  font: italic 300 2em "Fira Sans", sans-serif;
+  margin: 0 0 0.2em; }
+
+.text {
+  color: #230d1a;
+  display: block;
+  font: 300 0.9em "Fira Sans", sans-serif;
+  margin: 0 0 1em; }
+
+.main--level {
+  justify-content: flex-start;
+  padding-top: 210px; }
+  .main--level .main-title {
+    margin-bottom: 0.8em; }
+
+.main-player {
+  height: 55px;
+  margin-bottom: 80px;
+  overflow: hidden;
+  width: 530px; }
+
+.main-list {
+  display: flex;
+  margin: 140px auto 0; }
+
+.main-answer-r {
+  left: -900em;
+  position: absolute; }
+
+.main-answer {
+  box-sizing: border-box;
+  color: #230d1a;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  font-weight: 300;
+  margin: 0 5px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 134px; }
+
+.main-answer:hover .main-answer-preview {
+  border-color: #ff9749; }
+
+.main-answer:active .main-answer-preview {
+  border-color: red; }
+
+.main-answer-preview {
+  background: #f0eed5;
+  border: solid 5px #230d1a;
+  border-radius: 134px;
+  box-sizing: border-box;
+  height: 134px;
+  margin-bottom: 11px;
+  overflow: hidden;
+  width: 134px; }
+
+.genre-answer {
+  display: flex;
+  margin: 18px 0; }
+
+.player-wrapper {
+  height: 55px;
+  width: 410px; }
+
+.genre-answer input[type=checkbox] {
+  position: absolute;
+  left: -900em; }
+
+.genre-answer-check {
+  background: url("../img/icon-note-inactive.png") no-repeat;
+  height: 49px;
+  width: 35px; }
+
+input[type=checkbox]:checked + .genre-answer-check {
+  background-image: url("../img/icon-note-active.png"); }
+
+.genre-answer-send {
+  background: #f0eed5;
+  border: solid 4px #ff9749;
+  border-radius: 20px;
+  color: #230d1a;
+  display: block;
+  font: italic 300 2em "Fira Sans", sans-serif;
+  margin: 20px auto 0;
+  padding: 0 20px;
+  text-align: center; }
+
+.genre-answer-send:hover {
+  color: #ff9749; }
+
+.main--result {
+  justify-content: flex-start;
+  padding-top: 315px;
+  text-align: center; }
+  .main--result .title {
+    margin-bottom: 130px; }
+
+.main-stat {
+  color: #230d1a;
+  font: italic 300 2em/1.3 "Fira Sans", sans-serif; }
+
+.main-comparison {
+  color: #230d1a;
+  font-size: 0.9em;
+  font-weight: 300;
+  margin-bottom: 30px; }
+
+.main-replay {
+  color: #ff9749;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: 300; }
+
+.main-replay:hover {
+  color: red; }
+
+/*
+ * Приветственный экран игры: правила игры и кнопка начала
+ */
+.main--welcome {
+  padding-top: 395px; }
+  .main--welcome .text {
+    text-align: center;
+    width: 23em; }
+
+.main-play {
+  background: transparent;
+  border-color: transparent;
+  border-left-color: #ff9749;
+  border-style: solid;
+  border-width: 70px 0 70px 100px;
+  font-size: 0;
+  height: 0;
+  margin-top: -185px;
+  margin-left: 20px;
+  padding: 0;
+  position: absolute;
+  text-indent: -100em;
+  transform-origin: center;
+  width: 0; }
+
+.main-play:hover {
+  transform: scale(1.05); }
+
+.main-play:active {
+  transform: scale(1.04); }
+
+.timer {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0; }
+
+.timer-line {
+  fill: transparent;
+  stroke: #ff9749;
+  stroke-width: 15px;
+  height: 100%;
+  width: 100%; }
+
+.timer-value {
+  color: #ff9749;
+  font-size: 2em;
+  font-weight: 300;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%); }
+
+.timer-value-mins,
+.timer-value-secs {
+  display: inline-block;
+  width: 2ex; }
+
+.timer-value-mins {
+  text-align: right; }
+
+.timer-value-secs {
+  text-align: left; }
+
+.timer-value-dots {
+  animation: blink 1000ms steps(1, end) infinite; }
+
+.timer-value--finished {
+  animation: shrink 2000ms infinite;
+  color: red; }
+  .timer-value--finished .timer-value-dots {
+    animation: none; }
+
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+@keyframes shrink {
+  0% {
+    transform: translateX(-50%) scale(1); }
+  50% {
+    transform: translateX(-50%) scale(1.1); }
+  100% {
+    transform: translateX(-50%) scale(1); } }

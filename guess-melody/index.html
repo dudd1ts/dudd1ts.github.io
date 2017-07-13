@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Угадай мелодию</title>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,500i,700i&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; left: -1200em;">
+  <filter id="blur">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5"></feGaussianBlur>
+    <feOffset dx="0" dy="0"></feOffset>
+    <feMerge>
+      <feMergeNode></feMergeNode>
+      <feMergeNode in="SourceGraphic"></feMergeNode>
+    </feMerge>
+  </filter>
+</svg>
+
+<div class="app">
+  <section class="main"></section>
+
+  <section class="copyright">
+    Сделано в <a class="copyright-link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
+  </section>
+</div>
+
+<template id="templates">
+
+  <!-- Проигрыватель -->
+  <div class="player">
+    <audio></audio>
+    <button class="player-control" type="button">Play</button>
+    <div class="player-track">
+      <span class="player-status"></span>
+    </div>
+  </div>
+
+</template>
+
+<script src="js/main.js"></script>
+</body>
+</html>
