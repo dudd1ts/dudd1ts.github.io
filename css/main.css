@@ -69,9 +69,38 @@ body.is-loading {
 
 /* Icons */
 
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+}
+
+.icons li {
+  display: block;
+  padding: 12px 9px;
+}
+
+.icons a {
+  display: flex;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  color: #c8cccf;
+  text-decoration: none;
+  border: solid 1px currentColor;
+  border-radius: 100%;
+  transition: color .3s ease;
+}
+
+.icons a:hover {
+  color: #4d6e8c;
+}
+
 .icon {
-  width: 1.9em;
-  height: 2.7em;
+  width: 34px;
+  height: 48px;
   margin: auto 0;
   fill: currentColor;
 }
@@ -82,45 +111,13 @@ body.is-loading {
 }
 
 .icon--habr {
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
 }
 
-.letter-icon {
-  width: 0.7em;
-  font-size: 2.2em;
-}
-
-.icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-left: 0;
-  list-style: none;
-}
-
-.icons li {
-  display: inline-block;
-  padding: 0.675em 0.5em;
-}
-
-.icons a {
-  display: flex;
-  justify-content: center;
-  width: 3.75em;
-  height: 3.75em;
-  line-height: 3.75em;
-  color: #c8cccf;
-  text-decoration: none;
-  border: solid 1px currentColor;
-  border-radius: 100%;
-  transition: color .3s ease;
-}
-
-.icons a:hover {
-  color: #4d6e8c;
+.icon--tg {
+  width: 38px;
+  height: 38px;
 }
 
 /* Main */
@@ -258,7 +255,7 @@ body.is-loading {
 .avatar {
   display: block;
   width: 170px;
-  margin: 0 auto 1.5em;
+  margin: 0 auto 27px;
   border-radius: 100%;
   background-color: #ffffff;
   padding: 5px;
@@ -268,7 +265,7 @@ body.is-loading {
 .description:after {
   content: "";
   display: block;
-  margin: 1.8em auto;
+  margin: 32px auto;
   max-width: 230px;
   height: 3px;
   border-radius: 2px;
@@ -277,7 +274,7 @@ body.is-loading {
 
 .separator {
   display: block;
-  margin: 1.8em auto;
+  margin: 32px auto;
   max-width: 230px;
   height: 3px;
   border-radius: 2px;
@@ -350,6 +347,6 @@ body.is-loading .page-main {
 
 @media screen and (max-width: 360px) {
   .page-wrapper {
-    padding: 0.75em;
+    padding: 13px;
   }
 }
